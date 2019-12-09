@@ -1,0 +1,70 @@
+There are two kinds of Writers: StringWriter which writes to a String
+and FileWriter that writes to a file (these are not related to 
+those classes provided in Java/C#, etc.). There can be other types of
+Writers (like SocketWriter that writes to a Socket) in the future.
+
+A Writer simply writes to a target (like string or file) when a write function 
+is called. You can find out what was written to a Writer by calling a
+function getContent().
+
+There are several types of operations that can be performed on writers. For example:
+
+lower case: This converts the string being written to all lower case
+
+upper case: This converts the string being written to all upper case
+
+stupid replacer: This replaces the word stupid (only in lower case) to s*****
+
+duplicate remover: This removes consecutive duplicated words. 
+For example, "This is is it" will replaced by "This is it" when this function is applied.
+
+Design Writer so that other such functions may be added in the future, but without 
+changing any existing class. This is a key point you should revisit as you 
+work with the code and evolve the design.
+
+The user of your design will pick and choose what kinds of operations they 
+want to use or combine to use. For example, I may be interested in combining 
+the stupid replacer and the lower case operation when writing to a String. I 
+may also be interested in combining the duplicate remover and the upper case 
+operation when writing to a file. I may chose to use any combination of these 
+operations at will.
+
+You can imagine an operation like this (pseudocode):
+
+writeToWriter(Writer writer) {
+  writer.write("This is really really stupid!!!")
+}
+
+If I had combined the operations of duplicate remover, stupid replacer, and if 
+the writer is targeting a file (say myfile.dat), then the file myfile.dat 
+would contain the content
+
+This is really s*****!!!
+
+Some Pseudo code for you to use:
+
+class StringWriter {
+  private StringBuilder contents = new StringBuilder();
+
+  public void write(String input) {
+  	contents.append(input);
+	}                        
+	
+	public String getContents() {
+	  return contents.toString();
+	}
+}
+
+class FileWriter {
+  private String fileName = "contents.txt";
+
+  public void write(String input) throws IOException {
+  	try(var writer = new java.io.FileWriter(new File(fileName), true)) {
+      writer.append(input);
+    }
+	}
+	
+	public String getContents() throws IOException {
+		return Files.lines(Paths.get(fileName)).collect(joining(""));    
+	}
+}
