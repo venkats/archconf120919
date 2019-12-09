@@ -1,0 +1,7 @@
+This repository contains all the code examples and lab solutions written during the "Applying Design Patterns" workshop offered at ArchConf, on December 9, 2019.
+
+Thank you for attending.
+
+Venkat Subramaniam
+venkats@agiledeveloper.com
+@venkat_s
