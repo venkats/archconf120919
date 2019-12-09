@@ -1,0 +1,18 @@
+Open Closed Principle (OCP)
+Dependency Inversion Principle (DIP)
+Liskov's Substitution Principle (LSP)
+                 
+OCP:
+Abstract Factory
+Factory Method
+Prototype Pattern
+
+DIP:
+Iterator Pattern
+Strategy Pattern
+State Pattern
+Decorator Pattern
+Chain of Responsibility Pattern
+
+LSP:
+Composite Pattern  
