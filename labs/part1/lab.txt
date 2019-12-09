@@ -1,0 +1,1 @@
+The given code uses the traditional approach to strategy pattern. Refactor it to use lambdas, to reduce code, but to produce the same output.
