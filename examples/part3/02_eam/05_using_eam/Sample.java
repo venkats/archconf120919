@@ -10,9 +10,11 @@ class Resource {
   public static void use(Consumer<Resource> block) {
     Resource resource = new Resource();
     
-    block.accept(resource);
-    
-    resource.close();
+    try {
+      block.accept(resource);
+    } finally {
+      resource.close();
+    }
   }
 }
 
