@@ -7,32 +7,32 @@ Access:
 URL: https://github.com/venkats/archconf120919
                    
 Part 0: Design Patterns and Design Principles:
--Fascination towards patterns
--Principles as underpinnings
--Challenges with Patterns
--Identifying Patterns
--Influence of Functional Style
--Some Principles and Patterns
--Exploring OCP
--Exploring DIP
--Lambda expressions as a design tool
--Lambdas and higher order functions
+✓Fascination towards patterns
+✓Principles as underpinnings
+✓Challenges with Patterns
+✓Identifying Patterns
+✓Influence of Functional Style
+✓Some Principles and Patterns
+✓Exploring OCP
+✓Exploring DIP
+✓Lambda expressions as a design tool
+✓Lambdas and higher order functions
 
 Part 1: Lightweight Strategy:
--Strategy pattern
--Lab
+✓Strategy pattern
+✓Lab
 
 Part 2: Proxy and Decorators:
--Proxy Pattern
--Versatility of this pattern
--Focusing on Virtual Proxy
--Lazy evaluation
--Using Lazy to implement virtual proxy
--Default method on Predicate and Functions
--Lab
+✓Proxy Pattern
+✓Versatility of this pattern
+✓Focusing on Virtual Proxy
+✓Lazy evaluation
+✓Using Lazy to implement virtual proxy
+✓Default method on Predicate and Functions
+✓Lab
 
 Part 3: Cascade Method and Execute Around Method:
--Cascade Method Pattern—Creating Fluent interfaces
--Execute Around Method Pattern
--Lambdas and Exceptions
--Lab
+✓Cascade Method Pattern—Creating Fluent interfaces
+✓Execute Around Method Pattern
+✓Lambdas and Exceptions
+✓Lab
